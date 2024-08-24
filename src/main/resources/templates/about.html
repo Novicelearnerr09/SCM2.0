@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is about Page</h1>
+    <hr>    
+    <!-- Using Fragment -->
+     <!-- <div class="host-tag" th:insert="~{fragmentfile :: parent()}"></div>
+     <div class="host-tag" th:replace="~{fragmentfile :: parent}"></div> -->
+
+     <!-- <div class="host-tag" th:insert="~{fragmentfile :: parent('About One','About Two')}"></div> -->
+
+     <!-- <div class="host-tag" th:replace="~{fragmentfile :: parent(~{::section})}">   || use for passing section value -->
+        <div class="host-tag" th:replace="${isLogin} ? ~{fragmentfile :: parent(~{::section})} : ~{fragmentfile :: test}">
+            <section><h2>Dynamic Content</h2>
+             <h1> User Logged in.</h1>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Laborum deserunt hic dicta inventore esse. Ut aliquid facere reiciendis. 
+                Praesentium, neque.</p>
+                <button>Click here for More</button>
+            </section>
+
+       <section id="not_logged_in">
+        <h1>User is not logged in.</h1>
+       </section>
+
+      </div>
+
+
+    
+</body>
+</html>
