@@ -1,31 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace = "~{fragmentfile::parent(~{::#02}, ~{::title}, ~{::script})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <title>Services Page</title>
 </head>
 <body>
-    <h1>This is Services Page</h1>
-    <hr>    
-    <!-- Using Fragment -->
-     <!-- <div class="host-tag" th:insert="~{fragmentfile :: parent()}"></div>
-     <div class="host-tag" th:replace="~{fragmentfile :: parent}"></div> -->
-
-     <!-- <div class="host-tag" th:insert="~{fragmentfile :: parent('Service one','Service two')}"></div> -->
-
-     <!-- <div th:replace="~{fragmentfile :: parent(~{::#Second_Content})}"> // ID KE LIYE # USE HOTA HAI, CLASS KE LIYE .-->
-     <div th:replace="~{fragmentfile :: parent(~{::.third_Content})}">
-     <section id="main_content">
-        <h1>This is Dyanmic services passed to base parent with main_content</h1>
-     </section>
-     <section id="Second_Content">
-        <h1>This is Dyanmic services passed to base parent with Second_Content</h1>
-     </section>
-     <section class="third_Content">
-        <h1>This is Dyanmic services passed to base parent with Third_Content</h1>
-     </section>
-    </div>
     
+    <section id="02">
+    <h1>Welcome to Service Page</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A amet inventore ab doloremque et voluptatem?</p>
+</section>
+
+<script>
+    console.log("Service Page");
+</script>
 </body>
 </html>
